@@ -1,0 +1,7 @@
+{
+    "@@locale": "en",
+    "appTitle": "Storm",
+    "@appTitle": {
+        "description": "Text shown in the AppBar of the Storm Application."
+    }
+}
