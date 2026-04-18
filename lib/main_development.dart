@@ -1,6 +1,14 @@
+import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:storm/app/app.dart';
 import 'package:storm/bootstrap.dart';
+import 'package:talker_flutter/talker_flutter.dart';
 
 Future<void> main() async {
-  await bootstrap(() => const App());
+  SentryWidgetsFlutterBinding.ensureInitialized();
+
+  configureDependencies(environment: 'development');
+
+  final talker = getIt<Talker>();
+
+  await bootstrap(() => const App(), talker: talker);
 }

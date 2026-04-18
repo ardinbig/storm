@@ -1,33 +1,25 @@
 import 'dart:async';
-import 'dart:developer';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/widgets.dart';
+import 'package:talker_bloc_logger/talker_bloc_logger.dart';
+import 'package:talker_flutter/talker_flutter.dart';
 
-class AppBlocObserver extends BlocObserver {
-  const AppBlocObserver();
-
-  @override
-  void onChange(BlocBase<dynamic> bloc, Change<dynamic> change) {
-    super.onChange(bloc, change);
-    log('onChange(${bloc.runtimeType}, $change)');
-  }
-
-  @override
-  void onError(BlocBase<dynamic> bloc, Object error, StackTrace stackTrace) {
-    log('onError(${bloc.runtimeType}, $error, $stackTrace)');
-    super.onError(bloc, error, stackTrace);
-  }
-}
-
-Future<void> bootstrap(FutureOr<Widget> Function() builder) async {
+/// Bootstraps the application with the given [builder] and [talker].
+///
+/// - Hooks [FlutterError.onError] and platform-dispatcher errors into Talker.
+/// - Sets [Bloc.observer] to [TalkerBlocObserver] for automatic BLoC logging.
+Future<void> bootstrap(
+  FutureOr<Widget> Function() builder, {
+  required Talker talker,
+}) async {
   FlutterError.onError = (details) {
-    log(details.exceptionAsString(), stackTrace: details.stack);
+    talker.handle(details.exception, details.stack);
   };
 
-  Bloc.observer = const AppBlocObserver();
+  Bloc.observer = TalkerBlocObserver(talker: talker);
 
-  // Add cross-flavor configuration here
+  // TODO(ardinbig): Add Sentry initialization
 
   runApp(await builder());
 }

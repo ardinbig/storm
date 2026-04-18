@@ -4,6 +4,8 @@ include:
 analyzer:
   exclude:
     - lib/l10n/gen/*
+    - lib/env/env.g.dart
+    - lib/app/injection/injection.config.dart
 linter:
   rules:
     public_member_api_docs: false

@@ -1,0 +1,4 @@
+# Mark Dart code generation files as generated
+*.freezed.dart linguist-generated=true -diff
+*.gen.dart linguist-generated=true -diff
+*.g.dart linguist-generated=true -diff
