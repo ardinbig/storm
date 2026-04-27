@@ -17,10 +17,10 @@ class App extends StatelessWidget {
       supportedLocales: AppLocalizations.supportedLocales,
       home: Scaffold(
         appBar: AppBar(
-          title: Text(context.l10n.appTitle),
+          title: const Text('Storm'),
         ),
-        body: Center(
-          child: Text(context.l10n.appTitle),
+        body: const Center(
+          child: Text('Storm'),
         ),
       ),
     );

@@ -118,3 +118,7 @@ lib/l10n/gen/
 .env
 .env.local
 lib/env/env.g.dart
+
+# Sentry configuration
+sentry.properties
+sentry-wizard
