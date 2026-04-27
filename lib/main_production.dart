@@ -10,5 +10,5 @@ Future<void> main() async {
 
   final talker = getIt<Talker>();
 
-  await bootstrap(() => const App(), talker: talker);
+  await bootstrap(() => const App(), talker: talker, tracesSampleRate: 0.2);
 }

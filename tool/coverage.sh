@@ -34,7 +34,7 @@ fvm flutter --version
 very_good test --coverage --exclude-coverage "**/*.g.dart **/*.gen.dart **/l10n/*.dart **/l10n/**/*.dart **/main/bootstrap.dart" --exclude-tags 'presubmit-only' --test-randomize-ordering-seed random
 
 # Strip generated and l10n files from the lcov data so they don't skew coverage numbers
-lcov --remove ${PROJECT_COVERAGE} -o ${PROJECT_COVERAGE} \
+lcov --ignore-errors unused --remove ${PROJECT_COVERAGE} -o ${PROJECT_COVERAGE} \
     '**/*.g.dart' \
     '**/l10n/*.dart' \
     '**/l10n/**/*.dart' \
@@ -44,8 +44,8 @@ lcov --remove ${PROJECT_COVERAGE} -o ${PROJECT_COVERAGE} \
 # Generate an HTML report from the filtered lcov data and capture the summary output
 genhtml ${PROJECT_COVERAGE} -o coverage | tee ./coverage/output.txt
 
-# Extract the total-line coverage summary printed by genhtml (second-to-last line)
-COV_LINE=$(tail -2 ./coverage/output.txt | head -1)
+# Extract the total-line coverage percentage from genhtml output.
+COV_LINE=$(grep "lines\.\.\.\.\.\." ./coverage/output.txt | tail -1)
 
 # Expected value indicating full coverage
 SUB='100.0%'

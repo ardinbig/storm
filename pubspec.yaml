@@ -16,24 +16,25 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   get_it: ^9.2.1
-  injectable: ^2.7.1+4
+  injectable: ^3.0.0
   intl: ^0.20.2
-  sentry_flutter: ^9.18.0
-  talker_bloc_logger: ^5.1.16
-  talker_dio_logger: ^5.1.16
-  talker_flutter: ^5.1.16
+  sentry_flutter: ^9.19.0
+  talker_bloc_logger: ^5.1.17
+  talker_dio_logger: ^5.1.17
+  talker_flutter: ^5.1.17
 
 dev_dependencies:
   bloc_lint: ^0.4.1
   bloc_test: ^10.0.0
-  bloc_tools: ^0.1.0-dev.23
-  build_runner: ^2.13.1
+  bloc_tools: ^0.1.0-dev.24
+  build_runner: ^2.14.1
   envied_generator: ^1.3.4
-  flutter_gen_runner: ^5.13.0+1
+  flutter_gen_runner: ^5.14.1
   flutter_test:
     sdk: flutter
-  injectable_generator: ^2.12.1
+  injectable_generator: ^3.0.2
   mocktail: ^1.0.5
+  sentry_dart_plugin: ^3.3.0
   very_good_analysis: ^10.2.0
 
 flutter:
@@ -47,3 +48,9 @@ flutter_gen:
   output: lib/assets/
   integrations:
     flutter_svg: true
+
+sentry:
+  upload_debug_symbols: true
+  upload_source_maps: true
+  project: flutter
+  org: ardin-biganiro

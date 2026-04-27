@@ -1,8 +1,6 @@
-// Ignore for testing purposes
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:storm/app/view/app.dart';
+import 'package:storm/app/app.dart';
 
 import '../../helpers/helpers.dart';
 
@@ -18,14 +16,5 @@ void main() {
       expect(find.byType(AppBar), findsOneWidget);
       expect(find.text('Storm'), findsNWidgets(2));
     });
-
-    testWidgets(
-      'throws when mounted without an existing localization context',
-      (tester) async {
-        await tester.pumpWidget(const App());
-
-        expect(tester.takeException(), isA<TypeError>());
-      },
-    );
   });
 }

@@ -71,6 +71,36 @@ To learn more, visit <https://bloclibrary.dev/lint/>
 
 ---
 
+## Observability 🔭
+
+This project uses [Sentry](https://sentry.io) for error reporting and performance monitoring, integrated via [`sentry_flutter`](https://pub.dev/packages/sentry_flutter).
+
+### Configuration
+
+The Sentry DSN is read from the `.env` file via the `Env.sentryDsn` generated field. Add the following key to your `.env`:
+
+```
+SENTRY_DSN=https://<key>@<org>.ingest.sentry.io/<project>
+```
+
+Then regenerate the env class:
+
+```sh
+dart run build_runner build --delete-conflicting-outputs
+```
+
+### Traces Sample Rate
+
+The `tracesSampleRate` is set per flavor to balance observability and overhead:
+
+| Flavor      | `tracesSampleRate` | Description                                         |
+|-------------|--------------------|-----------------------------------------------------|
+| development | `1.0`              | Capture 100% of transactions for full visibility    |
+| staging     | `1.0`              | Capture 100% for thorough QA/testing                |
+| production  | `0.2`              | Sample 20% to reduce performance overhead and quota |
+
+---
+
 ## Working with Translations 🌐
 
 This project follows the [official internationalization guide for Flutter][internationalization_link] using [ARB files][arb_documentation_link] for translations.
@@ -110,15 +140,11 @@ Widget build(BuildContext context) {
 Update the `CFBundleLocalizations` array in the `Info.plist` at `ios/Runner/Info.plist` to include the new locale.
 
 ```xml
-    ...
-
-    <key>CFBundleLocalizations</key>
+<key>CFBundleLocalizations</key>
  <array>
   <string>en</string>
   <string>fr</string>
  </array>
-
-    ...
 ```
 
 ### Adding Translations
