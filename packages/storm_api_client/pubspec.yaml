@@ -6,7 +6,16 @@ publish_to: none
 environment:
   sdk: ^3.11.0
 
+dependencies:
+  dio: ^5.9.2
+  equatable: ^2.0.8
+  fpdart: ^1.2.0
+  fresh_dio: ^0.6.0
+  json_annotation: ^4.11.0
+
 dev_dependencies:
+  build_runner: ^2.15.0
+  json_serializable: ^6.13.2
   mocktail: ^1.0.5
-  test: ^1.31.0
+  test: any
   very_good_analysis: ^10.2.0
