@@ -37,6 +37,12 @@ sealed class StormFailure {
 
   /// Converts to the equivalent [Exception].
   Exception get asException;
+
+  /// Display message for UI snack bars / error states.
+  ///
+  /// - [StormApiFailure] → The server-provided error message.
+  /// - [StormNetworkFailure] → `'Network error. Please retry.'`
+  String get toDisplayMessage;
 }
 
 /// A server returned a non-success HTTP status.
@@ -48,6 +54,9 @@ final class StormApiFailure extends StormFailure {
 
   @override
   Exception get asException => StormApiException(message, statusCode);
+
+  @override
+  String get toDisplayMessage => message;
 }
 
 /// A network-level error prevented the request from completing.
@@ -56,6 +65,9 @@ final class StormNetworkFailure extends StormFailure {
 
   @override
   Exception get asException => StormApiNetworkException(message);
+
+  @override
+  String get toDisplayMessage => 'Network error. Please retry.';
 }
 
 /// Maps any caught error to a [StormFailure].
