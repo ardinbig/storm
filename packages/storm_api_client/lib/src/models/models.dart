@@ -5,3 +5,4 @@ export 'commission/commission.dart';
 export 'common/common.dart';
 export 'consumption/consumption.dart';
 export 'customer/customer.dart';
+export 'transaction/transaction.dart';
