@@ -1,3 +1,4 @@
+export 'activity/activity.dart';
 export 'agent/agent.dart';
 export 'auth/auth.dart';
 export 'card/card.dart';
