@@ -2,8 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:storm_api_client/storm_api_client.dart';
 import 'package:test/test.dart';
 
-import '../helpers/client_fixtures.dart';
-import '../helpers/client_test_helpers.dart';
+import '../helpers/helpers.dart';
 
 void main() {
   group('_mapDioToFailure', () {
