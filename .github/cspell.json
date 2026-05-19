@@ -24,5 +24,17 @@
     "Hola",
     "Mundo",
     "Saludo"
+  ],
+  "overrides": [
+    {
+      "filename": "**/README.md",
+      "words": [
+        "affiché",
+        "Bonjour",
+        "dans",
+        "Salutation",
+        "Texte"
+      ]
+    }
   ]
 }

@@ -1,3 +1,4 @@
+// coverage:ignore-file
 import 'package:flutter/widgets.dart';
 import 'package:storm/l10n/gen/app_localizations.dart';
 

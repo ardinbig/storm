@@ -21,6 +21,9 @@ jobs:
     with:
       flutter_version: "3.41.x"
       run_bloc_lint: true
+      setup: |
+        printf 'API_KEY=placeholder\nBASE_URL=https://example.com\nDATABASE_URL=db://placeholder\nSENTRY_DSN=https://placeholder@sentry.io/0\n' > .env
+        dart run build_runner build --delete-conflicting-outputs
 
   spell-check:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/spell_check.yml@v1
