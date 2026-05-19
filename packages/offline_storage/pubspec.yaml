@@ -20,7 +20,7 @@ dependencies:
     path: ../storm_api_client
 
 dev_dependencies:
-
+  dio: ^5.9.2
   flutter_test:
     sdk: flutter
   mocktail: ^1.0.5
