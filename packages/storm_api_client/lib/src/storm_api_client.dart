@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
 import 'package:fpdart/fpdart.dart';
-import 'package:fresh_dio/fresh_dio.dart';
 import 'package:storm_api_client/storm_api_client.dart';
 
 /// {@template storm_api_client}
