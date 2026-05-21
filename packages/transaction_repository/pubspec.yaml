@@ -1,0 +1,17 @@
+name: transaction_repository
+description: Repository for financial transactions and withdrawal operations.
+version: 0.1.0+1
+publish_to: none
+
+environment:
+  sdk: ^3.11.0
+
+dependencies:
+  fpdart: ^1.2.0
+  storm_api_client:
+    path: ../storm_api_client
+
+dev_dependencies:
+  mocktail: ^1.0.5
+  test: ^1.31.1
+  very_good_analysis: ^10.2.0
