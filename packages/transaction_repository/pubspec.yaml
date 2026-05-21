@@ -7,7 +7,6 @@ environment:
   sdk: ^3.11.0
 
 dependencies:
-  fpdart: ^1.2.0
   storm_api_client:
     path: ../storm_api_client
 

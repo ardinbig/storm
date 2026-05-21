@@ -1,4 +1,3 @@
-import 'package:fpdart/fpdart.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:station_repository/station_repository.dart';
 import 'package:storm_api_client/storm_api_client.dart';

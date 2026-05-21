@@ -1,5 +1,4 @@
 import 'package:authentication_repository/authentication_repository.dart';
-import 'package:fpdart/fpdart.dart';
 import 'package:storm_api_client/storm_api_client.dart';
 
 /// An immutable snapshot of a successful authentication.

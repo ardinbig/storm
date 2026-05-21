@@ -1,5 +1,4 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:fpdart/fpdart.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:offline_storage/offline_storage.dart';
 import 'package:storm_api_client/storm_api_client.dart';

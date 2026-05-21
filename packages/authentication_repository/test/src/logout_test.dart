@@ -3,7 +3,6 @@
 import 'dart:async';
 
 import 'package:authentication_repository/authentication_repository.dart';
-import 'package:fpdart/fpdart.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:storm_api_client/storm_api_client.dart';
 import 'package:test/test.dart';
