@@ -2,4 +2,6 @@
 /// customer profile operations.
 library;
 
-export 'src/account_repository.dart';
+export 'src/agent_repository.dart';
+export 'src/card_repository.dart';
+export 'src/customer_repository.dart';
