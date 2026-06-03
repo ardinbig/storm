@@ -32,10 +32,9 @@ class SyncEngine {
   ///   queue.
   /// * `dio`: The configured [Dio] instance for making HTTP requests.
   const SyncEngine({
-    required OfflineStorage offlineStorage,
-    required Dio dio,
-  }) : _offlineStorage = offlineStorage,
-       _dio = dio;
+    required this._offlineStorage,
+    required this._dio,
+  });
 
   final OfflineStorage _offlineStorage;
   final Dio _dio;

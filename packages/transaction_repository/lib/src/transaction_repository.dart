@@ -5,8 +5,7 @@ import 'package:storm_api_client/storm_api_client.dart';
 /// {@endtemplate}
 class TransactionRepository {
   /// {@macro transaction_repository}
-  const TransactionRepository({required StormApiClient apiClient})
-    : _apiClient = apiClient;
+  const TransactionRepository({required this._apiClient});
 
   final StormApiClient _apiClient;
 

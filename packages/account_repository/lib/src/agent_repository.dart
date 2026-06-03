@@ -5,8 +5,7 @@ import 'package:storm_api_client/storm_api_client.dart';
 /// {@endtemplate}
 class AgentRepository {
   /// {@macro agent_repository}
-  const AgentRepository({required StormApiClient apiClient})
-    : _apiClient = apiClient;
+  const AgentRepository({required this._apiClient});
 
   final StormApiClient _apiClient;
 

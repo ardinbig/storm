@@ -13,12 +13,10 @@ import 'package:storm_api_client/storm_api_client.dart';
 class AuthenticationRepository {
   /// {@macro authentication_repository}
   AuthenticationRepository({
-    required StormApiClient apiClient,
-    required TokenStorage<OAuth2Token> tokenStorage,
-    required Fresh<OAuth2Token> freshInterceptor,
-  }) : _apiClient = apiClient,
-       _tokenStorage = tokenStorage,
-       _freshInterceptor = freshInterceptor;
+    required this._apiClient,
+    required this._tokenStorage,
+    required this._freshInterceptor,
+  });
 
   final StormApiClient _apiClient;
   final TokenStorage<OAuth2Token> _tokenStorage;

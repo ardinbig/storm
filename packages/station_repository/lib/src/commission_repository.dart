@@ -5,8 +5,7 @@ import 'package:storm_api_client/storm_api_client.dart';
 /// {@endtemplate}
 class CommissionRepository {
   /// {@macro commission_repository}
-  const CommissionRepository({required StormApiClient apiClient})
-    : _apiClient = apiClient;
+  const CommissionRepository({required this._apiClient});
 
   final StormApiClient _apiClient;
 

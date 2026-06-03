@@ -6,8 +6,7 @@ import 'package:storm_api_client/storm_api_client.dart';
 /// {@endtemplate}
 class CardRepository {
   /// {@macro card_repository}
-  const CardRepository({required StormApiClient apiClient})
-    : _apiClient = apiClient;
+  const CardRepository({required this._apiClient});
 
   final StormApiClient _apiClient;
 

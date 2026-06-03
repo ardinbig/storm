@@ -5,8 +5,7 @@ import 'package:storm_api_client/storm_api_client.dart';
 /// {@endtemplate}
 class ConsumptionRepository {
   /// {@macro consumption_repository}
-  const ConsumptionRepository({required StormApiClient apiClient})
-    : _apiClient = apiClient;
+  const ConsumptionRepository({required this._apiClient});
 
   final StormApiClient _apiClient;
 
