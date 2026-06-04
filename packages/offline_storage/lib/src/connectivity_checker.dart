@@ -4,8 +4,7 @@ import 'package:fpdart/fpdart.dart';
 /// Small utility to check if the device currently has connectivity.
 class ConnectivityChecker {
   /// Creates a checker using [Connectivity] (injectable for tests).
-  const ConnectivityChecker({Connectivity? connectivity})
-    : _connectivity = connectivity;
+  const ConnectivityChecker({this._connectivity});
 
   final Connectivity? _connectivity;
 

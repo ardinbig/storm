@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:fresh_dio/fresh_dio.dart';
 import 'package:mocktail/mocktail.dart';
 import 'package:storm_api_client/storm_api_client.dart';
 import 'package:test/test.dart';

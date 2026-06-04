@@ -47,7 +47,9 @@ Future<void> bootstrap(
             ..attachScreenshot = true
             ..connectionTimeout = const Duration(seconds: 5);
         },
-        appRunner: () async => runApp(SentryWidget(child: await builder())),
+        appRunner: () => Zone.root.run(
+          () async => runApp(SentryWidget(child: await builder())),
+        ),
       );
     },
     (error, stack) => talker.handle(error, stack),

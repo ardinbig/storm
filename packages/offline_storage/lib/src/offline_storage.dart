@@ -26,13 +26,11 @@ class OfflineStorage {
   /// {@macro offline_storage}
   OfflineStorage({
     FlutterSecureStorage? secureStorage,
-    Database? database,
+    this._database,
     DatabaseOpener? databaseOpener,
-    Encrypter? encrypter,
+    this._encrypter,
   }) : _secureStorage = secureStorage ?? const FlutterSecureStorage(),
-       _database = database,
-       _opener = databaseOpener ?? _defaultOpener,
-       _encrypter = encrypter;
+       _opener = databaseOpener ?? _defaultOpener;
 
   static const _tableName = 'pending_operations';
   static const _dbKeyStorageKey = 'storm_db_key';

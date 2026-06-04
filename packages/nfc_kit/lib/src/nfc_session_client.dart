@@ -74,7 +74,7 @@ extension NfcSessionClientTE on NfcSessionClient {
 /// Production implementation backed by [FlutterNfcKit] with [Talker] logging.
 class FlutterNfcKitSessionClient implements NfcSessionClient {
   /// Creates a [FlutterNfcKitSessionClient].
-  const FlutterNfcKitSessionClient({required Talker talker}) : _talker = talker;
+  const FlutterNfcKitSessionClient({required this._talker});
 
   final Talker _talker;
 
