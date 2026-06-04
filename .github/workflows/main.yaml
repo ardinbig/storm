@@ -19,7 +19,7 @@ jobs:
   build:
     uses: VeryGoodOpenSource/very_good_workflows/.github/workflows/flutter_package.yml@v1
     with:
-      flutter_version: "3.41.x"
+      flutter_version: "3.44.x"
       run_bloc_lint: true
       setup: |
         printf 'API_KEY=placeholder\nBASE_URL=https://example.com\nDATABASE_URL=db://placeholder\nSENTRY_DSN=https://placeholder@sentry.io/0\n' > .env
