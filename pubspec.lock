@@ -1054,10 +1054,10 @@ packages:
     dependency: "direct main"
     description:
       name: talker_bloc_logger
-      sha256: b799c899b89472e1b2030a97f56c2ce7dfa739f743f464774c89a2c4d7c61447
+      sha256: "340e47226be980c7478fcc9070678b565c5b8ce763107ae49eaa2fb24c9e1f79"
       url: "https://pub.dev"
     source: hosted
-    version: "5.1.17"
+    version: "5.1.20"
   talker_dio_logger:
     dependency: "direct main"
     description:
